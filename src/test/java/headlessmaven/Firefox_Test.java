@@ -6,27 +6,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
-
-public class Test_title {
+public class Firefox_Test {
 	@Test
-	public void test() {
+	public  void Browser() {
+		
+		FirefoxOptions option = new FirefoxOptions();
 
-	ChromeOptions option = new ChromeOptions();
+		option.addArguments("--headless");
 
-		option.addArguments("--headless=new");
-
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver().setup();
 
 
 
-		WebDriver driver = new ChromeDriver(option);
+		WebDriver driver = new FirefoxDriver(option);
 
 		driver.get("https://www.google.com/");
 		System.out.print("Title is :" + driver.getTitle());
@@ -34,7 +32,7 @@ public class Test_title {
 		
 		WebElement sarch = driver.findElement(By.name("q"));
 		
-		sarch.sendKeys("taj hotel");
+		sarch.sendKeys("India Gate");
 		sarch.sendKeys(Keys.ENTER);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
 

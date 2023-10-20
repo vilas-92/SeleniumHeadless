@@ -27,8 +27,13 @@
     <artifactId>selenium-java</artifactId>
     <version>4.12.1</version>
   </dependency>
-	  
-	  
+
+
+   <dependency>
+   	<groupId>Automationtesting</groupId>
+   	<artifactId>Maventesting</artifactId>
+   	<version>0.0.1-SNAPSHOT</version>
+   </dependency>
   </dependencies>
   
   <build>
