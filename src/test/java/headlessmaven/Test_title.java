@@ -29,7 +29,7 @@ public class Test_title {
 		WebDriver driver = new ChromeDriver(option);
 
 		driver.get("https://www.google.com/");
-		System.out.print("Title is :" + driver.getTitle());
+		System.out.print("This is Title  :" + driver.getTitle());
 
 		
 		WebElement sarch = driver.findElement(By.name("q"));
